@@ -1,0 +1,80 @@
+ion-toolbar {
+  --background: #ff9800;
+  --color: #fff;
+}
+
+ion-content {
+  --background: silver;
+}
+
+.btn-color {
+  position: absolute;
+  right: 10px;
+}
+
+.wrap-word {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  background-color: silver;
+  .box {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+    width: 60%;
+
+    .listen {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-size: 30px;
+    }
+    .note {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 30px;
+    }
+
+    .life{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translate(-50%);
+      font-size: 26px;
+      ion-icon{
+        color: #673ab7;
+      }
+      
+    }
+    .img {
+      text-align: center;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.wrap-write {
+  background-color: silver;
+  padding: 10px;
+  .box {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+    height: calc(100vh - 310px);
+    border-radius: 10px;
+    position: relative;
+    background-image: url(./../../../../assets/writing/bg-write.jpg);
+    background-position: center center;
+    background-repeat: repeat;
+
+    canvas {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+  }
+}

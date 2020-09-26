@@ -1,0 +1,29 @@
+
+
+<ion-content>
+  <div class="header">
+    <ion-buttons slot="start" [routerLink]="['/']" class="btn-back">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+    <h2>쓰기</h2>
+    <p>매일 한국어를 배우다</p>
+  </div>
+
+  <div class="content-wirting">
+    <div class="box-wrap">
+      <div class="box" [routerLink]="['list-word']">
+        <img src="../../../assets/writing/hiragana-icon.png" alt="" />
+        <div class="content">
+          <h3>Hiragana <span>(ひらがな)</span></h3>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="../../../assets/writing/katakana-icon.png" alt="" />
+        <div class="content">
+          <h3>Katakana <span>(ヒラガナ)</span></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

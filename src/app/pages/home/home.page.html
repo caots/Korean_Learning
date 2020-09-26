@@ -1,0 +1,92 @@
+<ion-content *ngIf="data">
+  <div class="header">
+    <h2>매일 한국어를 배우다</h2>
+  </div>
+
+  <div class="ion-padding" scroll-y="false">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="slide">
+          <span class="label-new">새로운</span>
+          <img src="../../../assets/slides/slide-1.png" />
+          <p class="text">Writing Korean</p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <span class="label-new">새로운</span>
+          <img src="../../../assets/slides/slide-2.png" />
+          <p class="text">Exercise Korean</p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <img src="../../../assets/slides/slide-3.png" />
+          <p class="text">Talking Korean</p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <img src="../../../assets/slides/slide-4.png" />
+          <p class="text">Listening Korean</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="ion-padding" scroll-y="false">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="slide">
+          <img src="../../../assets/slides/slide-5.png" />
+          <p class="text">Blog Korean</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="card-topic">
+    <h3>Topic for you</h3>
+    <app-topic-card
+      [routerLink]="['/learn-writing']"
+      [isTimeLine]="2"
+      [image]="'../../../assets/slides/slide-1.png'"
+      [title]="'Writing'"
+      [subTitle]="'Beginer'"
+      [timeLearn]="'2 week'"
+    ></app-topic-card>
+    <app-topic-card
+      [image]="'../../../assets/slides/slide-2.png'"
+      [title]="'Listening'"
+      [subTitle]="'Beginer'"
+      [timeLearn]="'2 week'"
+    ></app-topic-card>
+    <app-topic-card
+      [image]="'../../../assets/slides/slide-3.png'"
+      [title]="'Test'"
+      [subTitle]="'Beginer'"
+      [timeLearn]="'5 Test'"
+    ></app-topic-card>
+    <app-topic-card
+      [image]="'../../../assets/slides/slide-4.png'"
+      [title]="'Test'"
+      [subTitle]="'Advance'"
+      [timeLearn]="'10 test'"
+    ></app-topic-card>
+  </div>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      refreshingSpinner="circles"
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+</ion-content>
+
+<ion-content *ngIf="!data">
+  <app-skeleton></app-skeleton>
+</ion-content>

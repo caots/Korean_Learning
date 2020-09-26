@@ -1,0 +1,37 @@
+.header {
+  background-color: #ff9800;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  position: relative;
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .btn-back {
+    position: absolute;
+    font-size: 24px;
+    top: 10%;
+    left: 10px;
+  }
+}
+
+.alphabet{
+  margin-top: 20px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  .box{
+    width: 18%;
+    margin-bottom: 10px !important;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+    img{
+      width: 100%;
+    }
+  }
+}

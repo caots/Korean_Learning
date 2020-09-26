@@ -1,0 +1,8 @@
+{
+  "name": "learn_korean",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
