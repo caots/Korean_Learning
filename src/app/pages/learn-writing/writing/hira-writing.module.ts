@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { HiraWritingPageRoutingModule } from './hira-writing-routing.module';
+import {SkeletonModule} from '../../../components/skeleton/skeleton.module'
 
 import { HiraWritingPage } from './hira-writing.page';
 
@@ -13,7 +14,8 @@ import { HiraWritingPage } from './hira-writing.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    HiraWritingPageRoutingModule
+    HiraWritingPageRoutingModule,
+    SkeletonModule
   ],
   declarations: [HiraWritingPage]
 })

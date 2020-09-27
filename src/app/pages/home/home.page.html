@@ -1,13 +1,19 @@
 <ion-content *ngIf="data">
   <div class="header">
-    <h2>매일 한국어를 배우다</h2>
+    <h2>毎日韓国語を学ぶ</h2>
   </div>
+
+  <ion-card>        
+    <ion-card-content style="font-size: 13px;">      
+      私たちはあなたを愛しています、私たちは常に可能な限り最高の体験を提供するために一生懸命働いています ❤️   
+      </ion-card-content>      
+  </ion-card>
 
   <div class="ion-padding" scroll-y="false">
     <ion-slides [options]="slideOpts">
       <ion-slide>
         <div class="slide">
-          <span class="label-new">새로운</span>
+          <span class="label-new">新しい</span>
           <img src="../../../assets/slides/slide-1.png" />
           <p class="text">Writing Korean</p>
         </div>
@@ -15,7 +21,7 @@
 
       <ion-slide>
         <div class="slide">
-          <span class="label-new">새로운</span>
+          <span class="label-new">新しい</span>
           <img src="../../../assets/slides/slide-2.png" />
           <p class="text">Exercise Korean</p>
         </div>

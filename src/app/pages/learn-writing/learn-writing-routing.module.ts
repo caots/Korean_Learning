@@ -10,7 +10,7 @@ const routes: Routes = [
     component: LearnWritingPage
   },
   {
-    path: ROUTING_PAGE.WRITING.LIST_wORD,
+    path: `${ROUTING_PAGE.WRITING.LIST_wORD}`,
     loadChildren: () => import('./list-word/list-word.module').then( m => m.ListWordPageModule)
   },
 ];

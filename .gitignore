@@ -1,0 +1,13 @@
+platforms/
+node_modules/
+.vscode/
+www/
+plugins/
+res/
+resources/
+*.p8
+*.p12
+
+ext-libs/
+package-lock.json
+debug.log

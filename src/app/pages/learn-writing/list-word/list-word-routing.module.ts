@@ -10,8 +10,8 @@ const routes: Routes = [
     component: ListWordPage
   },
   {
-    path: ROUTING_PAGE.WRITING.HIRA_WRITING,
-    loadChildren: () => import('./../hira-writing/hira-writing.module').then( m => m.HiraWritingPageModule)
+    path: `${ROUTING_PAGE.WRITING.WRITING}/:id`,
+    loadChildren: () => import('./../writing/hira-writing.module').then( m => m.HiraWritingPageModule)
   },
 ];
 

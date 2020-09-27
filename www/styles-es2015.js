@@ -486,8 +486,8 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mac/Documents/HUST/Project3/learn_korean/src/theme/variables.scss */"./src/theme/variables.scss");
-module.exports = __webpack_require__(/*! /Users/mac/Documents/HUST/Project3/learn_korean/src/global.scss */"./src/global.scss");
+__webpack_require__(/*! /Users/mac/Documents/HUST/Project3/Korean_Learning/src/theme/variables.scss */"./src/theme/variables.scss");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/HUST/Project3/Korean_Learning/src/global.scss */"./src/global.scss");
 
 
 /***/ })

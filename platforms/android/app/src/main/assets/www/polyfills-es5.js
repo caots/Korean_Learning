@@ -20302,7 +20302,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! /Users/mac/Documents/HUST/Project3/learn_korean/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
+      /*! /Users/mac/Documents/HUST/Project3/Korean_Learning/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
       "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
 
       __webpack_require__(
@@ -20310,15 +20310,15 @@
       "./node_modules/zone.js/dist/zone-legacy.js");
 
       __webpack_require__(
-      /*! /Users/mac/Documents/HUST/Project3/learn_korean/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */
+      /*! /Users/mac/Documents/HUST/Project3/Korean_Learning/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */
       "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
       __webpack_require__(
-      /*! /Users/mac/Documents/HUST/Project3/learn_korean/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js */
+      /*! /Users/mac/Documents/HUST/Project3/Korean_Learning/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js */
       "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js");
 
       module.exports = __webpack_require__(
-      /*! /Users/mac/Documents/HUST/Project3/learn_korean/src/polyfills.ts */
+      /*! /Users/mac/Documents/HUST/Project3/Korean_Learning/src/polyfills.ts */
       "./src/polyfills.ts");
       /***/
     }

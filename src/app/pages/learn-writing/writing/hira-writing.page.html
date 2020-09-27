@@ -1,31 +1,53 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start" [routerLink]="['/learn-writing/list-word']">
-      <ion-icon name="arrow-back-outline" style="font-size: 24px;"></ion-icon>
+    <ion-buttons
+      slot="start"
+      [routerLink]="['/learn-writing/list-word']"
+      [queryParams]="{type:  word.type}"
+      *ngIf="!isLoading"
+    >
+      <ion-icon name="arrow-back-outline" style="font-size: 24px"></ion-icon>
     </ion-buttons>
     <ion-title>ひらがな</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="wrap-word">
+  <div class="wrap-word" *ngIf="!isLoading">
     <div class="box">
       <div class="listen">
         <ion-icon name="volume-high-outline" style="color: #3880ff"></ion-icon>
       </div>
       <div class="life">
-        <ion-icon name="heart-circle-outline"></ion-icon>
-        <ion-icon name="heart-circle-outline"></ion-icon>
-        <ion-icon name="heart-circle-outline"></ion-icon>
+        <ion-icon name="shield-checkmark-outline"></ion-icon>&nbsp;
+        <ion-icon name="shield-checkmark-outline"></ion-icon>&nbsp;
+        <ion-icon name="shield-checkmark-outline"></ion-icon>
       </div>
       <div class="note">
-        <ion-icon name="star-outline" style="color: #673ab7"></ion-icon>
+        <ion-icon name="star-outline" style="color: #ff9800"></ion-icon>
       </div>
       <div class="img">
-        <img src="./../../../../assets/writing/hira/a-hira.png" alt="" />
+        <img [src]="word.imageDraw" alt="" />
       </div>
     </div>
   </div>
+  <ion-item *ngIf="isLoading">
+    <ion-thumbnail slot="start">
+      <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+    </ion-thumbnail>
+    <ion-label>
+      <h3>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+      </h3>
+      <p>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+      </p>
+    </ion-label>
+  </ion-item>
+  
   <div class="wrap-write">
     <ion-buttons class="btn-color">
       <button

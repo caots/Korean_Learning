@@ -199,9 +199,9 @@
       }, {
         path: src_app_constants_config__WEBPACK_IMPORTED_MODULE_3__["ROUTING_PAGE"].WRITING.PARENT,
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-learn-writing-learn-writing-module */
-          "pages-learn-writing-learn-writing-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-learn-writing-learn-writing-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/learn-writing/learn-writing.module */
           "./src/app/pages/learn-writing/learn-writing.module.ts")).then(function (m) {
             return m.LearnWritingPageModule;
@@ -404,13 +404,19 @@
       /* harmony import */
 
 
-      var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! ./app-routing.module */
       "./src/app/app-routing.module.ts");
       /* harmony import */
 
 
-      var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! ./app.component */
       "./src/app/app.component.ts");
 
@@ -419,14 +425,14 @@
       };
 
       AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
         entryComponents: [],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"]],
         providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
           provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
           useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
         }],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
       })], AppModule);
       /***/
     },
@@ -458,7 +464,8 @@
         },
         WRITING: {
           PARENT: 'learn-writing',
-          HIRA_WRITING: 'hira-writing'
+          LIST_wORD: 'list-word',
+          WRITING: 'writing'
         }
       };
       /***/
@@ -561,7 +568,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! /Users/mac/Documents/HUST/Project3/learn_korean/src/main.ts */
+      /*! /Users/mac/Documents/HUST/Project3/Korean_Learning/src/main.ts */
       "./src/main.ts");
       /***/
     }

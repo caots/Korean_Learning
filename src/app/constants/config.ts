@@ -6,7 +6,7 @@ export const ROUTING_PAGE = {
     WRITING: {
       PARENT: 'learn-writing',
       LIST_wORD: 'list-word',
-      HIRA_WRITING: 'hira-writing'
+      WRITING: 'writing'
     }
   };
   

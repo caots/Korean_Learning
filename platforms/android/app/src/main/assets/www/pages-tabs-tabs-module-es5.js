@@ -78,9 +78,9 @@
           children: [{
             path: '',
             loadChildren: function loadChildren() {
-              return __webpack_require__.e(
+              return Promise.all(
               /*! import() | home-home-module */
-              "home-home-module").then(__webpack_require__.bind(null,
+              [__webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null,
               /*! ../home/home.module */
               "./src/app/pages/home/home.module.ts")).then(function (m) {
                 return m.HomePageModule;

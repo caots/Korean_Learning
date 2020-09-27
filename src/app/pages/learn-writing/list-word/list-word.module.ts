@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { ListWordPageRoutingModule } from './list-word-routing.module';
+import {SkeletonModule} from '../../../components/skeleton/skeleton.module'
 
 import { ListWordPage } from './list-word.page';
 
@@ -13,7 +14,8 @@ import { ListWordPage } from './list-word.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ListWordPageRoutingModule
+    ListWordPageRoutingModule,
+    SkeletonModule
   ],
   declarations: [ListWordPage]
 })
