@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit ,Renderer2} from '@angular/core';
 
 @Component({
   selector: 'app-topic-card',
@@ -7,14 +7,20 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TopicCardComponent implements OnInit {
 
-  @Input('image')  image : string;
   @Input('title')  title : string;
+  @Input('image')  image : string;
   @Input('subTitle')  subTitle : string;
   @Input('timeLearn')  timeLearn : string;
-  @Input('isTimeLine') isTimeLine: number
 
-  constructor() { }
+  constructor(
+    private renderer: Renderer2,
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+
+  ngAfterViewInit(): void {
+  }
+
 
 }

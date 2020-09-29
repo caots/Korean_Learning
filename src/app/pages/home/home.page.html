@@ -1,11 +1,11 @@
-<ion-content *ngIf="data">
+<ion-content *ngIf="!isLoading">
   <div class="header">
     <h2>毎日韓国語を学ぶ</h2>
   </div>
 
   <ion-card>        
     <ion-card-content style="font-size: 13px;">      
-      私たちはあなたを愛しています、私たちは常に可能な限り最高の体験を提供するために一生懸命働いています ❤️   
+      私たちはあなたを愛しています、私たちは常に可能な限り最高の体験を提供するために一生懸命働いています ❤️  
       </ion-card-content>      
   </ion-card>
 
@@ -15,7 +15,7 @@
         <div class="slide">
           <span class="label-new">新しい</span>
           <img src="../../../assets/slides/slide-1.png" />
-          <p class="text">Writing Korean</p>
+          <p class="text">Reading 1</p>
         </div>
       </ion-slide>
 
@@ -23,21 +23,21 @@
         <div class="slide">
           <span class="label-new">新しい</span>
           <img src="../../../assets/slides/slide-2.png" />
-          <p class="text">Exercise Korean</p>
+          <p class="text">Reading 2</p>
         </div>
       </ion-slide>
 
       <ion-slide>
         <div class="slide">
           <img src="../../../assets/slides/slide-3.png" />
-          <p class="text">Talking Korean</p>
+          <p class="text">Reading 3</p>
         </div>
       </ion-slide>
 
       <ion-slide>
         <div class="slide">
           <img src="../../../assets/slides/slide-4.png" />
-          <p class="text">Listening Korean</p>
+          <p class="text">Reading 4</p>
         </div>
       </ion-slide>
     </ion-slides>
@@ -48,37 +48,36 @@
       <ion-slide>
         <div class="slide">
           <img src="../../../assets/slides/slide-5.png" />
-          <p class="text">Blog Korean</p>
+          <p class="text">listening 1</p>
         </div>
       </ion-slide>
     </ion-slides>
   </div>
 
   <div class="card-topic">
-    <h3>Topic for you</h3>
+    <h3 style="font-size: 18px;">Topic for you</h3>
     <app-topic-card
       [routerLink]="['/learn-writing']"
-      [isTimeLine]="2"
-      [image]="'../../../assets/slides/slide-1.png'"
+      [image]="'../../../assets/slides/slide-6.png'"
       [title]="'Writing'"
       [subTitle]="'Beginer'"
       [timeLearn]="'2 week'"
     ></app-topic-card>
     <app-topic-card
-      [image]="'../../../assets/slides/slide-2.png'"
+      [image]="'../../../assets/slides/slide-7.png'"
       [title]="'Listening'"
       [subTitle]="'Beginer'"
       [timeLearn]="'2 week'"
     ></app-topic-card>
     <app-topic-card
-      [image]="'../../../assets/slides/slide-3.png'"
-      [title]="'Test'"
+      [image]="'../../../assets/slides/slide-9.png'"
+      [title]="'Exams'"
       [subTitle]="'Beginer'"
       [timeLearn]="'5 Test'"
     ></app-topic-card>
     <app-topic-card
-      [image]="'../../../assets/slides/slide-4.png'"
-      [title]="'Test'"
+      [image]="'../../../assets/slides/slide-8.png'"
+      [title]="'Exams'"
       [subTitle]="'Advance'"
       [timeLearn]="'10 test'"
     ></app-topic-card>
@@ -93,6 +92,6 @@
   </ion-refresher>
 </ion-content>
 
-<ion-content *ngIf="!data">
+<ion-content *ngIf="isLoading">
   <app-skeleton></app-skeleton>
 </ion-content>

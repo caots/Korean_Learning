@@ -50,9 +50,6 @@ export class HiraWritingPage implements OnInit {
       data =>  {
         this.isLoading =  false;
         this.word =  data;
-        setTimeout(()=>{
-          this.initCanvasDraw(); 
-        },500)
       },
       err => {
         this.wordService.handlerError(err)
@@ -60,9 +57,12 @@ export class HiraWritingPage implements OnInit {
     )
   }
 
+  ngAfterViewInit(): void {
+    this.initCanvasDraw();
+  }
+
   initCanvasDraw(){
     this.canvasElement = this.canvas.nativeElement;
-    console.log(this.canvasElement);
     this.canvasElement.width = this.platform.width();
     this.canvasElement.height = this.platform.height() - 290;
   }

@@ -3,14 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  FIREBASE_CONFIG : {
+    apiKey: "AIzaSyDL_W7xBv_h63m11DkJcSYx6P7GwvmlOpM",
+    authDomain: "tts-powergate.firebaseapp.com",
+    databaseURL: "https://tts-powergate.firebaseio.com",
+    projectId: "tts-powergate",
+    storageBucket: "tts-powergate.appspot.com",
+    messagingSenderId: "189313182279",
+    appId: "1:189313182279:web:36e10dae7175a47fff5f62",
+    measurementId: "G-WP2H1NVTXT"
+  }
 };
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
