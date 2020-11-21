@@ -30,6 +30,19 @@ export class WordService {
     }
   }
 
+  getAllContact() {
+    let url = `${apiEndPoints.word}` ;
+    try{
+      return this.http.get(url).pipe(
+        map(res => {
+          return res;
+        })
+      )
+    }catch(err){
+      return of(err)
+    }
+  }
+
   // get word by id
   getWordById(id: number){
     let url = `${apiEndPoints.word}/${id}`;   

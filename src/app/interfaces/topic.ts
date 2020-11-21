@@ -1,5 +1,5 @@
 export interface Topic{
-    id: number,
+    id: string,
     title: string,
     image: string,
     subTitle: string,

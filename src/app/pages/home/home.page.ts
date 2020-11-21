@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore , AngularFirestoreCollection} from '@angular/fire/firestore';
+import { Observable,Subscription  } from 'rxjs';
+import { map } from 'rxjs/operators';
 import {Topic} from '../../interfaces/topic'
+import {Topicervice} from '../../services/topic.service'
+import { WordService } from '../../services/word/word.service'
 
 @Component({
   selector: 'app-home',
@@ -13,34 +17,70 @@ export class HomePage implements OnInit {
     slidesPerView: 1.5,
     speed: 400
   };
-  topics : Topic[];
+  topics : any[];
   isLoading: boolean = false;
+  subscribe: Subscription;
+
 
   constructor(
-    private firestore: AngularFirestore
-  ) { }
+    private firestore: AngularFirestore,
+    private wordService : WordService
+  ) {}
 
   ngOnInit() {
+  }
+
+  ionViewDidEnter(){
     this.getAllTopic();
   }
 
   doRefresh(event) {
-    console.log('Begin async operation');
-
     setTimeout(() => {
-      console.log('Async operation has ended');
+      this.getAllTopic();
       event.target.complete();
-    }, 2000);
+    }, 500);
   }
 
-  getAllTopic(){
+  getAllTopic(){    
     this.isLoading = true;
-    this.firestore.collection('topic')
-    .snapshotChanges()
-    .subscribe(data =>  {
+    setTimeout(()=>{
       this.isLoading = false;
-      console.log(data);
-    })
+      this.topics = topics;
+    }, 600)
+    // this.firestore.collection("topic").snapshotChanges()
+    // .subscribe(data =>{
+    //   this.topics = data.map(e => {
+    //     let topic = Object.assign({}, {id: e.payload.doc.id}, e.payload.doc.data());
+    //     return topic;
+    //   })
+    //   this.isLoading = false;
+    // })
   }
-
 }
+
+const topics = [
+  {
+    image :'../../../assets/slides/slide-1.png',
+    title: 'Writing',
+    subTitle: 'Beginer',
+    timeLearn: '2 week'
+  },
+  {
+    image :'../../../assets/slides/slide-2.png',
+    title: 'Listening',
+    subTitle: 'Beginer',
+    timeLearn: '2 week'
+  },
+  {
+    image :'../../../assets/slides/slide-3.png',
+    title: 'Test',
+    subTitle: 'Beginer',
+    timeLearn: '5 Test'
+  },
+  {
+    image :'../../../assets/slides/slide-4.png',
+    title: 'Writing',
+    subTitle: 'Advance',
+    timeLearn: '10 Test'
+  }
+]

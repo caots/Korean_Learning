@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { LearnWritingPageRoutingModule } from './learn-writing-routing.module';
 import {HiraWritingPageModule} from './writing/hira-writing.module'
+import { File } from '@ionic-native/file/ngx';
 
 import { LearnWritingPage } from './learn-writing.page';
 
@@ -17,6 +18,9 @@ import { LearnWritingPage } from './learn-writing.page';
     LearnWritingPageRoutingModule,
     HiraWritingPageModule,
   ],
-  declarations: [LearnWritingPage]
+  declarations: [LearnWritingPage],
+  providers:[
+    File
+  ]
 })
 export class LearnWritingPageModule {}

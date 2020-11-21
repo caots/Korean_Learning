@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "189313182279",
+    "firebase_url": "https://tts-powergate.firebaseio.com",
+    "project_id": "tts-powergate",
+    "storage_bucket": "tts-powergate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189313182279:android:e19e6300482cd16aff5f62",
+        "android_client_info": {
+          "package_name": "com.angularfirebas.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189313182279-mj633p7s5vehnjg0591evv0kp7kgqdfs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2U2a53QPKPkrjJz3RL0_9ykL7KVBAc2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189313182279-mj633p7s5vehnjg0591evv0kp7kgqdfs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

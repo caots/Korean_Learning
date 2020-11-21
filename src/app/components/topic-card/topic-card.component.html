@@ -5,14 +5,14 @@
       <ion-icon name="rocket-outline"></ion-icon>&nbsp;
       <ion-icon name="rocket-outline"></ion-icon>
     </div>
-    <p class="title">{{title}}</p>
+    <p class="title">{{topic.title}}</p>
     <p class="sub">
-      <span>{{subTitle}}</span>
-      <span>{{timeLearn}}</span>
+      <span>{{topic.subTitle}}</span>
+      <span>{{topic.timeLearn}}</span>
     </p>
     <ion-icon name="share-social-outline"></ion-icon>
   </div>
   <div class="img">
-    <img [src]="image" alt="" />
+    <img [src]="topic.image" alt="" />
   </div>
 </div>

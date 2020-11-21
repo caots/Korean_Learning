@@ -1,5 +1,5 @@
 import { Component, Input, OnInit ,Renderer2} from '@angular/core';
-
+import {Topic} from '../../interfaces/topic'
 @Component({
   selector: 'app-topic-card',
   templateUrl: './topic-card.component.html',
@@ -7,10 +7,7 @@ import { Component, Input, OnInit ,Renderer2} from '@angular/core';
 })
 export class TopicCardComponent implements OnInit {
 
-  @Input('title')  title : string;
-  @Input('image')  image : string;
-  @Input('subTitle')  subTitle : string;
-  @Input('timeLearn')  timeLearn : string;
+  @Input('topic')  topic : Topic;
 
   constructor(
     private renderer: Renderer2,
@@ -21,6 +18,5 @@ export class TopicCardComponent implements OnInit {
 
   ngAfterViewInit(): void {
   }
-
 
 }

@@ -8,7 +8,7 @@
     >
       <ion-icon name="arrow-back-outline" style="font-size: 24px"></ion-icon>
     </ion-buttons>
-    <ion-title>ひらがな</ion-title>
+    <ion-title style="text-align: center;">ひらがな</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -54,17 +54,17 @@
         ion-button
         icon-only
         style.color="#fff"
-        (click)="changeColour('#333', true)"
+        (click)="changeColour('#fff', true)"
       >
-        <ion-icon style="color: #fff; font-size: 30px" name="square"></ion-icon>
+        <ion-icon style="color: #333; font-size: 30px" name="square"></ion-icon>
       </button>
       <button
         ion-button
         icon-only
         style.color="#fff"
-        (click)="changeColour('#333', false)"
+        (click)="changeColour('#fff', false)"
       >
-        <ion-icon style="color: #333; font-size: 30px" name="square"></ion-icon>
+        <ion-icon style="color: #fff; font-size: 30px" name="square"></ion-icon>
       </button>
       <button
         ion-button
@@ -86,8 +86,8 @@
       ></canvas>
     </div>
   </div>
-  <ion-fab horizontal="center" vertical="bottom" slot="fixed">
-    <ion-fab-button>
+  <ion-fab horizontal="center" vertical="bottom" slot="fixed" (click)="submitImage()">
+    <ion-fab-button (click)="saveCanvasImage()">
       <ion-icon name="checkmark-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>

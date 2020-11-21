@@ -57,29 +57,8 @@
   <div class="card-topic">
     <h3 style="font-size: 18px;">Topic for you</h3>
     <app-topic-card
-      [routerLink]="['/learn-writing']"
-      [image]="'../../../assets/slides/slide-6.png'"
-      [title]="'Writing'"
-      [subTitle]="'Beginer'"
-      [timeLearn]="'2 week'"
-    ></app-topic-card>
-    <app-topic-card
-      [image]="'../../../assets/slides/slide-7.png'"
-      [title]="'Listening'"
-      [subTitle]="'Beginer'"
-      [timeLearn]="'2 week'"
-    ></app-topic-card>
-    <app-topic-card
-      [image]="'../../../assets/slides/slide-9.png'"
-      [title]="'Exams'"
-      [subTitle]="'Beginer'"
-      [timeLearn]="'5 Test'"
-    ></app-topic-card>
-    <app-topic-card
-      [image]="'../../../assets/slides/slide-8.png'"
-      [title]="'Exams'"
-      [subTitle]="'Advance'"
-      [timeLearn]="'10 test'"
+      [routerLink]="['/learn-writing']" *ngFor="let topic of topics"
+      [topic]="topic"
     ></app-topic-card>
   </div>
 
