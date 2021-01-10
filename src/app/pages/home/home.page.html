@@ -1,4 +1,4 @@
-<ion-content *ngIf="!isLoading">
+<!-- <ion-content *ngIf="!isLoading">
   <div class="header">
     <h2>毎日韓国語を学ぶ</h2>
   </div>
@@ -73,4 +73,35 @@
 
 <ion-content *ngIf="isLoading">
   <app-skeleton></app-skeleton>
+</ion-content> -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> Recoginze Image </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <h5 *ngIf="fileImageWord">Cropped Image</h5>
+
+  <img *ngIf="fileImageWord" class="image" [src]="fileImageWord" />
+  <img *ngIf="!fileImageWord" class="image" [src]="defaultImage" />
+
+  <ion-button class="ion-margin-top" (click)="selectImage()">
+    Pick Image to Crop
+  </ion-button>
+
+  <ion-button class="ion-margin-top" (click)="recognizeImage()">
+    Recognize Image
+  </ion-button>
+  <progress-bar
+    [progress]="progress"
+    *ngIf="!result"
+    [color-degraded]="{'0': '#fd8c8e',  '15': '#f9c3d3', '25': '#00cbcb'}"
+  ></progress-bar>
+  <div
+    style="margin-top: 30px; text-align: left"
+    *ngIf="result"
+    [innerHTML]="result"
+  ></div>
+  <div style="margin-top: 30px" *ngIf="!result">No text result.</div>
 </ion-content>

@@ -12,6 +12,9 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire'
 import { environment } from '../environments/environment'
 import { AngularFirestoreModule } from '@angular/fire/firestore'
+import { Crop } from '@ionic-native/crop/ngx';
+import { Camera } from '@ionic-native/Camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +26,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore'
   providers: [
     StatusBar,
     SplashScreen,
+    Crop,
+    Camera,
+    File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent]

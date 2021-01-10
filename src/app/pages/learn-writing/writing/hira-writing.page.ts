@@ -32,7 +32,7 @@ export class HiraWritingPage implements OnInit {
   worker: Tesseract.Worker;
   workerReady: boolean = false;
   textOcr: string;
-  image = '../../../../assets/images/test2.png'
+  image = 'http://13.229.230.180:5000/images/xxx.jpg'
 
   constructor(
     public platform: Platform,
@@ -122,8 +122,7 @@ export class HiraWritingPage implements OnInit {
 
     let data = dataUrl.split(',')[1];
     let blob = this.commomService.b64toBlob(data, 'image/png');
-
-    let imageWord = new File([blob], 'image-word.png', { type: blob.type, lastModified: Date.now() });
+    let imageWord =this.commomService.blobToFile(blob, 'image.png');
     this.commomService.uploadImageToServer(imageWord).subscribe(data => {
       this.fileImageWord = apiEndPointAws.images + data.filename;
       this.recognizeImage(this.fileImageWord);
@@ -146,7 +145,7 @@ export class HiraWritingPage implements OnInit {
 
   async recognizeImage(url) {
     console.log(url);
-    const result: any = await this.worker.recognize(url);
+    const result: any = await this.worker.recognize(this.image);
     console.log(result);
     this.textOcr = result.text;
   }

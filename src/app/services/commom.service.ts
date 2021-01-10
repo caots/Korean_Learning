@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { apiEndPointAws } from '../constants/api.config'
+import { apiEndPointAws, apiEndPointRecognizeText } from '../constants/api.config'
 
 import { Observable, BehaviorSubject, of } from 'rxjs'
 import { catchError, tap, map } from 'rxjs/operators';
@@ -15,14 +15,27 @@ export class CommomService {
     private http: HttpClient,
   ) { }
 
+  recognizeText(type: number) {
+    let url = `${apiEndPointRecognizeText.api}`;
+    try {
+      return this.http.get(url).pipe(
+        map(res => {
+          return res;
+        })
+      )
+    } catch (err) {
+      return of(err)
+    }
+  }
+
   uploadImageToServer(file) {
     let url = `${apiEndPointAws.upload}`;
-    let formData: FormData = new FormData();
-    formData.append('file', file, file.name);
+    const formData = new FormData();
+    formData.append('file', file, 'xxx.jpg') 
 
     let headers = new HttpHeaders();
-    headers.append('Content-Type', 'multipart/form-data');
-    headers.append('Accept', 'application/json');
+    headers.set('Content-Type', null);
+    headers.set('Accept', "multipart/form-data");
     const options = {
       headers: headers
     }
@@ -59,11 +72,10 @@ export class CommomService {
     return blob;
   }
 
-  blobToFile(theBlob, fileName) {
-    theBlob.lastModifiedDate = new Date();
-    theBlob.name = fileName;
-    return theBlob;
-  }
 
+
+  public blobToFile = (theBlob: Blob, fileName: string): File => {
+    return new File([theBlob], fileName, { type: theBlob.type, lastModified: Date.now() })
+  }
 
 }

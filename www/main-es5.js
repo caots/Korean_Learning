@@ -201,7 +201,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-learn-writing-learn-writing-module */
-          [__webpack_require__.e("common"), __webpack_require__.e("pages-learn-writing-learn-writing-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~home-home-module~pages-learn-writing-learn-writing-module"), __webpack_require__.e("pages-learn-writing-learn-writing-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/learn-writing/learn-writing.module */
           "./src/app/pages/learn-writing/learn-writing.module.ts")).then(function (m) {
             return m.LearnWritingPageModule;
@@ -419,6 +419,42 @@
       var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! ./app.component */
       "./src/app/app.component.ts");
+      /* harmony import */
+
+
+      var _angular_fire__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/fire */
+      "./node_modules/@angular/fire/__ivy_ngcc__/fesm2015/angular-fire.js");
+      /* harmony import */
+
+
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      /*! ../environments/environment */
+      "./src/environments/environment.ts");
+      /* harmony import */
+
+
+      var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      /*! @angular/fire/firestore */
+      "./node_modules/@angular/fire/__ivy_ngcc__/fesm2015/angular-fire-firestore.js");
+      /* harmony import */
+
+
+      var _ionic_native_crop_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      /*! @ionic-native/crop/ngx */
+      "./node_modules/@ionic-native/crop/__ivy_ngcc__/ngx/index.js");
+      /* harmony import */
+
+
+      var _ionic_native_Camera_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      /*! @ionic-native/Camera/ngx */
+      "./node_modules/@ionic-native/Camera/__ivy_ngcc__/ngx/index.js");
+      /* harmony import */
+
+
+      var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      /*! @ionic-native/file/ngx */
+      "./node_modules/@ionic-native/file/__ivy_ngcc__/ngx/index.js");
 
       var AppModule = function AppModule() {
         _classCallCheck(this, AppModule);
@@ -427,8 +463,8 @@
       AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
         entryComponents: [],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"]],
-        providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_10__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_11__["environment"].FIREBASE_CONFIG), _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_12__["AngularFirestoreModule"]],
+        providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_crop_ngx__WEBPACK_IMPORTED_MODULE_13__["Crop"], _ionic_native_Camera_ngx__WEBPACK_IMPORTED_MODULE_14__["Camera"], _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_15__["File"], {
           provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
           useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
         }],
@@ -495,17 +531,18 @@
 
 
       var environment = {
-        production: false
+        production: false,
+        FIREBASE_CONFIG: {
+          apiKey: "AIzaSyDL_W7xBv_h63m11DkJcSYx6P7GwvmlOpM",
+          authDomain: "tts-powergate.firebaseapp.com",
+          databaseURL: "https://tts-powergate.firebaseio.com",
+          projectId: "tts-powergate",
+          storageBucket: "tts-powergate.appspot.com",
+          messagingSenderId: "189313182279",
+          appId: "1:189313182279:web:36e10dae7175a47fff5f62",
+          measurementId: "G-WP2H1NVTXT"
+        }
       };
-      /*
-       * For easier debugging in development mode, you can import the following file
-       * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
-       *
-       * This import should be commented out in production mode because it will have a negative impact
-       * on performance if an error is thrown.
-       */
-      // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
-
       /***/
     },
 

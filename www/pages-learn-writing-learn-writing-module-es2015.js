@@ -22,25 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-buttons\n      slot=\"start\"\n      [routerLink]=\"['/learn-writing/list-word']\"\n      [queryParams]=\"{type:  word.type}\"\n      *ngIf=\"!isLoading\"\n    >\n      <ion-icon name=\"arrow-back-outline\" style=\"font-size: 24px\"></ion-icon>\n    </ion-buttons>\n    <ion-title>ひらがな</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div class=\"wrap-word\" *ngIf=\"!isLoading\">\n    <div class=\"box\">\n      <div class=\"listen\">\n        <ion-icon name=\"volume-high-outline\" style=\"color: #3880ff\"></ion-icon>\n      </div>\n      <div class=\"life\">\n        <ion-icon name=\"shield-checkmark-outline\"></ion-icon>&nbsp;\n        <ion-icon name=\"shield-checkmark-outline\"></ion-icon>&nbsp;\n        <ion-icon name=\"shield-checkmark-outline\"></ion-icon>\n      </div>\n      <div class=\"note\">\n        <ion-icon name=\"star-outline\" style=\"color: #ff9800\"></ion-icon>\n      </div>\n      <div class=\"img\">\n        <img [src]=\"word.imageDraw\" alt=\"\" />\n      </div>\n    </div>\n  </div>\n  <ion-item *ngIf=\"isLoading\">\n    <ion-thumbnail slot=\"start\">\n      <ion-skeleton-text animated style=\"width: 100%\"></ion-skeleton-text>\n    </ion-thumbnail>\n    <ion-label>\n      <h3>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n      </h3>\n      <p>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n      </p>\n      <p>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n      </p>\n    </ion-label>\n  </ion-item>\n  \n  <div class=\"wrap-write\">\n    <ion-buttons class=\"btn-color\">\n      <button\n        ion-button\n        icon-only\n        style.color=\"#fff\"\n        (click)=\"changeColour('#333', true)\"\n      >\n        <ion-icon style=\"color: #fff; font-size: 30px\" name=\"square\"></ion-icon>\n      </button>\n      <button\n        ion-button\n        icon-only\n        style.color=\"#fff\"\n        (click)=\"changeColour('#333', false)\"\n      >\n        <ion-icon style=\"color: #333; font-size: 30px\" name=\"square\"></ion-icon>\n      </button>\n      <button\n        ion-button\n        icon-only\n        style.color=\"#fff\"\n        (click)=\"changeColour('#ff9800', false)\"\n      >\n        <ion-icon\n          style=\"color: #ff9800; font-size: 30px\"\n          name=\"square\"\n        ></ion-icon>\n      </button>\n    </ion-buttons>\n    <div class=\"box\">\n      <canvas\n        #canvas\n        (touchstart)=\"handleStart($event)\"\n        (touchmove)=\"handleMove($event)\"\n      ></canvas>\n    </div>\n  </div>\n  <ion-fab horizontal=\"center\" vertical=\"bottom\" slot=\"fixed\">\n    <ion-fab-button>\n      <ion-icon name=\"checkmark-outline\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>\n");
-
-/***/ }),
-
-/***/ "./src/app/constants/api.config.ts":
-/*!*****************************************!*\
-  !*** ./src/app/constants/api.config.ts ***!
-  \*****************************************/
-/*! exports provided: apiEndPoints */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "apiEndPoints", function() { return apiEndPoints; });
-let url = 'https://5f7053e8bdb178001633beae.mockapi.io/api/v1/';
-const apiEndPoints = {
-    word: `${url}/word`
-};
-
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-buttons\n      slot=\"start\"\n      [routerLink]=\"['/learn-writing/list-word']\"\n      [queryParams]=\"{type:  word.type}\"\n      *ngIf=\"!isLoading\"\n    >\n      <ion-icon name=\"arrow-back-outline\" style=\"font-size: 24px\"></ion-icon>\n    </ion-buttons>\n    <ion-title style=\"text-align: center;\">ひらがな</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div class=\"wrap-word\" *ngIf=\"!isLoading\">\n    <div class=\"box\">\n      <div class=\"listen\">\n        <ion-icon name=\"volume-high-outline\" style=\"color: #3880ff\"></ion-icon>\n      </div>\n      <div class=\"life\">\n        <ion-icon name=\"shield-checkmark-outline\"></ion-icon>&nbsp;\n        <ion-icon name=\"shield-checkmark-outline\"></ion-icon>&nbsp;\n        <ion-icon name=\"shield-checkmark-outline\"></ion-icon>\n      </div>\n      <div class=\"note\">\n        <ion-icon name=\"star-outline\" style=\"color: #ff9800\"></ion-icon>\n      </div>\n      <div class=\"img\">\n        <img [src]=\"word.imageDraw\" alt=\"\" />\n      </div>\n    </div>\n  </div>\n  <ion-item *ngIf=\"isLoading\">\n    <ion-thumbnail slot=\"start\">\n      <ion-skeleton-text animated style=\"width: 100%\"></ion-skeleton-text>\n    </ion-thumbnail>\n    <ion-label>\n      <h3>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n      </h3>\n      <p>\n        <ion-skeleton-text animated style=\"width: 80%\"></ion-skeleton-text>\n      </p>\n      <p>\n        <ion-skeleton-text animated style=\"width: 60%\"></ion-skeleton-text>\n      </p>\n    </ion-label>\n  </ion-item>\n  \n  <div class=\"wrap-write\">\n    <ion-buttons class=\"btn-color\">\n      <button\n        ion-button\n        icon-only\n        style.color=\"#fff\"\n        (click)=\"changeColour('#fff', true)\"\n      >\n        <ion-icon style=\"color: #333; font-size: 30px\" name=\"square\"></ion-icon>\n      </button>\n      <button\n        ion-button\n        icon-only\n        style.color=\"#fff\"\n        (click)=\"changeColour('#fff', false)\"\n      >\n        <ion-icon style=\"color: #fff; font-size: 30px\" name=\"square\"></ion-icon>\n      </button>\n      <button\n        ion-button\n        icon-only\n        style.color=\"#fff\"\n        (click)=\"changeColour('#ff9800', false)\"\n      >\n        <ion-icon\n          style=\"color: #ff9800; font-size: 30px\"\n          name=\"square\"\n        ></ion-icon>\n      </button>\n    </ion-buttons>\n    <div class=\"box\">\n      <canvas\n        #canvas\n        (touchstart)=\"handleStart($event)\"\n        (touchmove)=\"handleMove($event)\"\n      ></canvas>\n    </div>\n  </div>\n  <ion-fab horizontal=\"center\" vertical=\"bottom\" slot=\"fixed\" (click)=\"submitImage()\">\n    <ion-fab-button (click)=\"saveCanvasImage()\">\n      <ion-icon name=\"checkmark-outline\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>\n");
 
 /***/ }),
 
@@ -104,7 +86,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
 /* harmony import */ var _learn_writing_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./learn-writing-routing.module */ "./src/app/pages/learn-writing/learn-writing-routing.module.ts");
 /* harmony import */ var _writing_hira_writing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./writing/hira-writing.module */ "./src/app/pages/learn-writing/writing/hira-writing.module.ts");
-/* harmony import */ var _learn_writing_page__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./learn-writing.page */ "./src/app/pages/learn-writing/learn-writing.page.ts");
+/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/__ivy_ngcc__/ngx/index.js");
+/* harmony import */ var _learn_writing_page__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./learn-writing.page */ "./src/app/pages/learn-writing/learn-writing.page.ts");
+
 
 
 
@@ -124,7 +108,10 @@ LearnWritingPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]
             _learn_writing_routing_module__WEBPACK_IMPORTED_MODULE_5__["LearnWritingPageRoutingModule"],
             _writing_hira_writing_module__WEBPACK_IMPORTED_MODULE_6__["HiraWritingPageModule"],
         ],
-        declarations: [_learn_writing_page__WEBPACK_IMPORTED_MODULE_7__["LearnWritingPage"]]
+        declarations: [_learn_writing_page__WEBPACK_IMPORTED_MODULE_8__["LearnWritingPage"]],
+        providers: [
+            _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_7__["File"]
+        ]
     })
 ], LearnWritingPageModule);
 
@@ -251,7 +238,8 @@ HiraWritingPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
             _hira_writing_routing_module__WEBPACK_IMPORTED_MODULE_5__["HiraWritingPageRoutingModule"],
             _components_skeleton_skeleton_module__WEBPACK_IMPORTED_MODULE_6__["SkeletonModule"]
         ],
-        declarations: [_hira_writing_page__WEBPACK_IMPORTED_MODULE_7__["HiraWritingPage"]]
+        declarations: [_hira_writing_page__WEBPACK_IMPORTED_MODULE_7__["HiraWritingPage"]],
+        providers: []
     })
 ], HiraWritingPageModule);
 
@@ -268,7 +256,7 @@ HiraWritingPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("ion-toolbar {\n  --background: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);\n  --color: #fff;\n}\n\nion-content {\n  --background: linear-gradient(to top, #dfe9f3 0%, white 100%);\n}\n\n.btn-color {\n  position: absolute;\n  right: 10px;\n}\n\n.wrap-word {\n  display: flex;\n  justify-content: center;\n  padding: 20px;\n  position: relative;\n}\n\n.wrap-word .box {\n  background-color: #fff;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);\n  width: 60%;\n}\n\n.wrap-word .box .listen {\n  position: absolute;\n  left: 10px;\n  top: 10px;\n  font-size: 30px;\n}\n\n.wrap-word .box .note {\n  position: absolute;\n  right: 10px;\n  top: 10px;\n  font-size: 30px;\n}\n\n.wrap-word .box .life {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  position: absolute;\n  bottom: -8px;\n  left: 50%;\n  transform: translate(-50%);\n  font-size: 26px;\n}\n\n.wrap-word .box .life ion-icon {\n  color: #3880ff;\n}\n\n.wrap-word .box .img {\n  text-align: center;\n}\n\n.wrap-word .box .img img {\n  width: 100%;\n}\n\n.wrap-write {\n  padding: 10px;\n}\n\n.wrap-write .box {\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);\n  height: calc(100vh - 310px);\n  border-radius: 10px;\n  position: relative;\n  background-image: url('bg-write.jpg');\n  background-position: center center;\n  background-repeat: repeat;\n}\n\n.wrap-write .box canvas {\n  height: 100%;\n  width: 100%;\n  display: block;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGVhcm4td3JpdGluZy93cml0aW5nL2hpcmEtd3JpdGluZy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwrREFBQTtFQUVBLGFBQUE7QUFBRjs7QUFHQTtFQUNFLDZEQUFBO0FBQUY7O0FBR0E7RUFDRSxrQkFBQTtFQUNBLFdBQUE7QUFBRjs7QUFHQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtBQUFGOztBQUNFO0VBQ0Usc0JBQUE7RUFDQSx5Q0FBQTtFQUNBLFVBQUE7QUFDSjs7QUFDSTtFQUNFLGtCQUFBO0VBQ0EsVUFBQTtFQUNBLFNBQUE7RUFDQSxlQUFBO0FBQ047O0FBQ0k7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxTQUFBO0VBQ0EsZUFBQTtBQUNOOztBQUVJO0VBQ0UsYUFBQTtFQUNBLDhCQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxTQUFBO0VBQ0EsMEJBQUE7RUFDQSxlQUFBO0FBQU47O0FBQ007RUFDRSxjQUFBO0FBQ1I7O0FBR0k7RUFDRSxrQkFBQTtBQUROOztBQUVNO0VBQ0UsV0FBQTtBQUFSOztBQU1BO0VBQ0UsYUFBQTtBQUhGOztBQUlFO0VBQ0UseUNBQUE7RUFDQSwyQkFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7RUFDQSxxQ0FBQTtFQUNBLGtDQUFBO0VBQ0EseUJBQUE7QUFGSjs7QUFJSTtFQUNFLFlBQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtBQUZOIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbGVhcm4td3JpdGluZy93cml0aW5nL2hpcmEtd3JpdGluZy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tdG9vbGJhciB7XG4gIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KC0yMGRlZywgI2ZjNjA3NiAwJSwgI2ZmOWE0NCAxMDAlKTtcbiAgO1xuICAtLWNvbG9yOiAjZmZmO1xufVxuXG5pb24tY29udGVudCB7XG4gIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIHRvcCwgI2RmZTlmMyAwJSwgd2hpdGUgMTAwJSk7XG59XG5cbi5idG4tY29sb3Ige1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAxMHB4O1xufVxuXG4ud3JhcC13b3JkIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgLmJveCB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwIDJweCA1cHggcmdiYSgwLCAwLCAwLCAwLjE4KTtcbiAgICB3aWR0aDogNjAlO1xuXG4gICAgLmxpc3RlbiB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgdG9wOiAxMHB4O1xuICAgICAgZm9udC1zaXplOiAzMHB4O1xuICAgIH1cbiAgICAubm90ZSB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICByaWdodDogMTBweDtcbiAgICAgIHRvcDogMTBweDtcbiAgICAgIGZvbnQtc2l6ZTogMzBweDtcbiAgICB9XG5cbiAgICAubGlmZXtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAtOHB4O1xuICAgICAgbGVmdDogNTAlO1xuICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSk7XG4gICAgICBmb250LXNpemU6IDI2cHg7XG4gICAgICBpb24taWNvbntcbiAgICAgICAgY29sb3I6ICMzODgwZmY7XG4gICAgICB9XG4gICAgICBcbiAgICB9XG4gICAgLmltZyB7XG4gICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICBpbWcge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cblxuLndyYXAtd3JpdGUge1xuICBwYWRkaW5nOiAxMHB4O1xuICAuYm94IHtcbiAgICBib3gtc2hhZG93OiAwIDJweCA1cHggcmdiYSgwLCAwLCAwLCAwLjE4KTtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmggLSAzMTBweCk7XG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4vLi4vLi4vLi4vLi4vYXNzZXRzL3dyaXRpbmcvYmctd3JpdGUuanBnKTtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgY2VudGVyO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiByZXBlYXQ7XG5cbiAgICBjYW52YXMge1xuICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICBkaXNwbGF5OiBibG9jaztcbiAgICB9XG4gIH1cbn1cbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("ion-toolbar {\n  --background: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);\n  --color: #fff;\n}\n\nion-content {\n  --background: linear-gradient(to top, #dfe9f3 0%, white 100%);\n}\n\n.btn-color {\n  position: absolute;\n  right: 10px;\n}\n\n.wrap-word {\n  display: flex;\n  justify-content: center;\n  padding: 20px;\n  position: relative;\n}\n\n.wrap-word .box {\n  background-color: #fff;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);\n  width: 60%;\n}\n\n.wrap-word .box .listen {\n  position: absolute;\n  left: 10px;\n  top: 10px;\n  font-size: 30px;\n}\n\n.wrap-word .box .note {\n  position: absolute;\n  right: 10px;\n  top: 10px;\n  font-size: 30px;\n}\n\n.wrap-word .box .life {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  position: absolute;\n  bottom: -8px;\n  left: 50%;\n  transform: translate(-50%);\n  font-size: 26px;\n}\n\n.wrap-word .box .life ion-icon {\n  color: #3880ff;\n}\n\n.wrap-word .box .img {\n  text-align: center;\n}\n\n.wrap-word .box .img img {\n  width: 100%;\n}\n\n.wrap-write {\n  padding: 10px;\n}\n\n.wrap-write .box {\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);\n  height: calc(100vh - 310px);\n  border-radius: 10px;\n  position: relative;\n  background-color: #283e48;\n  background-position: center center;\n  background-repeat: repeat;\n}\n\n.wrap-write .box canvas {\n  height: 100%;\n  width: 100%;\n  display: block;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGVhcm4td3JpdGluZy93cml0aW5nL2hpcmEtd3JpdGluZy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSwrREFBQTtFQUVBLGFBQUE7QUFBRjs7QUFHQTtFQUNFLDZEQUFBO0FBQUY7O0FBR0E7RUFDRSxrQkFBQTtFQUNBLFdBQUE7QUFBRjs7QUFHQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtBQUFGOztBQUNFO0VBQ0Usc0JBQUE7RUFDQSx5Q0FBQTtFQUNBLFVBQUE7QUFDSjs7QUFDSTtFQUNFLGtCQUFBO0VBQ0EsVUFBQTtFQUNBLFNBQUE7RUFDQSxlQUFBO0FBQ047O0FBQ0k7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxTQUFBO0VBQ0EsZUFBQTtBQUNOOztBQUVJO0VBQ0UsYUFBQTtFQUNBLDhCQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxTQUFBO0VBQ0EsMEJBQUE7RUFDQSxlQUFBO0FBQU47O0FBQ007RUFDRSxjQUFBO0FBQ1I7O0FBR0k7RUFDRSxrQkFBQTtBQUROOztBQUVNO0VBQ0UsV0FBQTtBQUFSOztBQU1BO0VBQ0UsYUFBQTtBQUhGOztBQUlFO0VBQ0UseUNBQUE7RUFDQSwyQkFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtFQUNBLGtDQUFBO0VBQ0EseUJBQUE7QUFGSjs7QUFJSTtFQUNFLFlBQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtBQUZOIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbGVhcm4td3JpdGluZy93cml0aW5nL2hpcmEtd3JpdGluZy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tdG9vbGJhciB7XG4gIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KC0yMGRlZywgI2ZjNjA3NiAwJSwgI2ZmOWE0NCAxMDAlKTtcbiAgO1xuICAtLWNvbG9yOiAjZmZmO1xufVxuXG5pb24tY29udGVudCB7XG4gIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIHRvcCwgI2RmZTlmMyAwJSwgd2hpdGUgMTAwJSk7XG59XG5cbi5idG4tY29sb3Ige1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAxMHB4O1xufVxuXG4ud3JhcC13b3JkIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgLmJveCB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwIDJweCA1cHggcmdiYSgwLCAwLCAwLCAwLjE4KTtcbiAgICB3aWR0aDogNjAlO1xuXG4gICAgLmxpc3RlbiB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgdG9wOiAxMHB4O1xuICAgICAgZm9udC1zaXplOiAzMHB4O1xuICAgIH1cbiAgICAubm90ZSB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICByaWdodDogMTBweDtcbiAgICAgIHRvcDogMTBweDtcbiAgICAgIGZvbnQtc2l6ZTogMzBweDtcbiAgICB9XG5cbiAgICAubGlmZXtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAtOHB4O1xuICAgICAgbGVmdDogNTAlO1xuICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSk7XG4gICAgICBmb250LXNpemU6IDI2cHg7XG4gICAgICBpb24taWNvbntcbiAgICAgICAgY29sb3I6ICMzODgwZmY7XG4gICAgICB9XG4gICAgICBcbiAgICB9XG4gICAgLmltZyB7XG4gICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICBpbWcge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cblxuLndyYXAtd3JpdGUge1xuICBwYWRkaW5nOiAxMHB4O1xuICAuYm94IHtcbiAgICBib3gtc2hhZG93OiAwIDJweCA1cHggcmdiYSgwLCAwLCAwLCAwLjE4KTtcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmggLSAzMTBweCk7XG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzI4M2U0ODtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgY2VudGVyO1xuICAgIGJhY2tncm91bmQtcmVwZWF0OiByZXBlYXQ7XG5cbiAgICBjYW52YXMge1xuICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICBkaXNwbGF5OiBibG9jaztcbiAgICB9XG4gIH1cbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -287,25 +275,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var _services_word_word_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/word/word.service */ "./src/app/services/word/word.service.ts");
+/* harmony import */ var _services_commom_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/commom.service */ "./src/app/services/commom.service.ts");
+/* harmony import */ var _constants_api_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../constants/api.config */ "./src/app/constants/api.config.ts");
+/* harmony import */ var tesseract_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! tesseract.js */ "./node_modules/tesseract.js/src/index.js");
+/* harmony import */ var tesseract_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(tesseract_js__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
 
 
 
 
 
 let HiraWritingPage = class HiraWritingPage {
-    constructor(platform, activateRouter, router, wordService) {
+    constructor(platform, activateRouter, router, commomService, wordService) {
         this.platform = platform;
         this.activateRouter = activateRouter;
         this.router = router;
+        this.commomService = commomService;
         this.wordService = wordService;
         this.isLoading = true;
-        this.currentColour = '#333';
-        this.brushSize = 10;
+        this.currentColour = '#fff';
+        this.brushSize = 3;
+        this.workerReady = false;
+        this.image = 'http://13.229.230.180:5000/images/xxx.jpg';
     }
     ngOnInit() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             this.getWordIdByParams();
             this.getWordById();
+            this.loadWorker();
         });
     }
     getWordIdByParams() {
@@ -319,17 +318,18 @@ let HiraWritingPage = class HiraWritingPage {
             this.subscribe = this.wordService.getWordById(this.idWord).subscribe(data => {
                 this.isLoading = false;
                 this.word = data;
-                setTimeout(() => {
-                    this.initCanvasDraw();
-                }, 500);
             }, err => {
                 this.wordService.handlerError(err);
             });
         });
     }
+    ngAfterViewInit() {
+        this.initCanvasDraw();
+    }
+    submitImage() {
+    }
     initCanvasDraw() {
         this.canvasElement = this.canvas.nativeElement;
-        console.log(this.canvasElement);
         this.canvasElement.width = this.platform.width();
         this.canvasElement.height = this.platform.height() - 290;
     }
@@ -361,6 +361,41 @@ let HiraWritingPage = class HiraWritingPage {
         this.lastX = currentX;
         this.lastY = currentY;
     }
+    saveCanvasImage() {
+        let dataUrl = this.canvasElement.toDataURL();
+        let ctx = this.canvasElement.getContext('2d');
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); // Clears the canvas
+        let data = dataUrl.split(',')[1];
+        let blob = this.commomService.b64toBlob(data, 'image/png');
+        let imageWord = this.commomService.blobToFile(blob, 'image.png');
+        this.commomService.uploadImageToServer(imageWord).subscribe(data => {
+            this.fileImageWord = _constants_api_config__WEBPACK_IMPORTED_MODULE_6__["apiEndPointAws"].images + data.filename;
+            this.recognizeImage(this.fileImageWord);
+        }, err => {
+            console.log(err);
+        });
+    }
+    loadWorker() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.worker = Object(tesseract_js__WEBPACK_IMPORTED_MODULE_7__["createWorker"])({
+                logger: progress => {
+                    console.log(progress);
+                }
+            });
+            yield this.worker.load();
+            yield this.worker.loadLanguage('eng');
+            yield this.worker.initialize('eng');
+            this.workerReady = true;
+        });
+    }
+    recognizeImage(url) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            console.log(url);
+            const result = yield this.worker.recognize(this.image);
+            console.log(result);
+            this.textOcr = result.text;
+        });
+    }
     ngOnDestroy() {
         this.subscribe.unsubscribe();
     }
@@ -369,6 +404,7 @@ HiraWritingPage.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _services_commom_service__WEBPACK_IMPORTED_MODULE_5__["CommomService"] },
     { type: _services_word_word_service__WEBPACK_IMPORTED_MODULE_4__["WordService"] }
 ];
 HiraWritingPage.propDecorators = {
@@ -415,6 +451,17 @@ let WordService = class WordService {
     //get all word by type
     getWordByType(type) {
         let url = `${_constants_api_config__WEBPACK_IMPORTED_MODULE_2__["apiEndPoints"].word}?type=${type}`;
+        try {
+            return this.http.get(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
+                return res;
+            }));
+        }
+        catch (err) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(err);
+        }
+    }
+    getAllContact() {
+        let url = `${_constants_api_config__WEBPACK_IMPORTED_MODULE_2__["apiEndPoints"].word}`;
         try {
             return this.http.get(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
                 return res;
